@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spend Bill Gate's Money</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Spend Bill Gate's Money (Growtopia Edition)</h1>
+    </header>
+
+    <div id="balance" style="display: flex; align-items: center; justify-content: center; height: 150px;">
+        <h2 id="money">113,400,000,000.00 $</h2>
+    </div>
+
+    <section id="items">
+        <div class="item">
+            <img src="ghc.png" alt="ghc" style="height: 70px; width: 70px; margin-top: 5px;">
+            <h3>GHC</h3>
+            <form>
+                <input type="button" value="SELL" class="btn" onclick="sell(14, this)">
+                <input type="text" value="0" readonly style="width: 80px; text-align:center;">
+                <input type="button" value="BUY" class="btn" onclick="buy(14, this)">
+                <br>
+                <br>
+                <input type="button" value="SELL STACK" class="btn" onclick="sellStack(14, this)">
+                <input type="button" value="BUY STACK" class="btn" onclick="buyStack(14, this)">
+            </form>
+        </div>
+        <div class="item">
+            <img src="gangel.png" alt="gangel" style="height: 70px; width: 70px; margin-top: 5px;">
+            <h3>G Angels</h3>
+            <form>
+                <input type="button" value="SELL" class="btn" onclick="sell(13, this)">
+                <input type="text" value="0" readonly style="width: 80px; text-align:center;">
+                <input type="button" value="BUY" class="btn" onclick="buy(13, this)">
+                <br>
+                <br>
+                <input type="button" value="SELL STACK" class="btn" onclick="sellStack(13, this)">
+                <input type="button" value="BUY STACK" class="btn" onclick="buyStack(13, this)">
+            </form>
+        </div>
+        <div class="item">
+            <img src="ndev.png" alt="ndev" style="height: 70px; width: 70px; margin-top: 5px;">
+            <h3>N Devs</h3>
+            <form>
+                <input type="button" value="SELL" class="btn" onclick="sell(14, this)">
+                <input type="text" value="0" readonly style="width: 80px; text-align:center;">
+                <input type="button" value="BUY" class="btn" onclick="buy(14, this)">
+                <br>
+                <br>
+                <input type="button" value="SELL STACK" class="btn" onclick="sellStack(14, this)">
+                <input type="button" value="BUY STACK" class="btn" onclick="buyStack(14, this)">
+            </form>
+        </div>
+        <div class="item">
+            <img src="davinci.png" alt="davinci" style="height: 70px; width: 70px; margin-top: 5px;">
+            <h3>Da Vinci</h3>
+            <form>
+                <input type="button" value="SELL" class="btn" onclick="sell(70, this)">
+                <input type="text" value="0" readonly style="width: 80px; text-align:center;">
+                <input type="button" value="BUY" class="btn" onclick="buy(70, this)">
+                <br>
+                <br>
+                <input type="button" value="SELL STACK" class="btn" onclick="sellStack(70, this)">
+                <input type="button" value="BUY STACK" class="btn" onclick="buyStack(70, this)">
+            </form>
+        </div>
+        <div class="item">
+            <img src="pwings.png" alt="pwings" style="height: 70px; width: 70px; margin-top: 5px;">
+            <h3>P Wings</h3>
+            <form>
+                <input type="button" value="SELL" class="btn" onclick="sell(50, this)">
+                <input type="text" value="0" readonly style="width: 80px; text-align:center;">
+                <input type="button" value="BUY" class="btn" onclick="buy(50, this)">
+                <br>
+                <br>
+                <input type="button" value="SELL STACK" class="btn" onclick="sellStack(50, this)">
+                <input type="button" value="BUY STACK" class="btn" onclick="buyStack(50, this)">
+            </form>
+        </div>
+        <!-- NEW ROW -->
+        <div class="item">
+            <img src="lwings.png" alt="lwings" style="height: 70px; width: 70px; margin-top: 5px;">
+            <h3>L Wings</h3>
+            <form>
+                <input type="button" value="SELL" class="btn" onclick="sell(70, this)">
+                <input type="text" value="0" readonly style="width: 80px; text-align:center;">
+                <input type="button" value="BUY" class="btn" onclick="buy(70, this)" id="s">
+            </form>
+        </div>
+        <div class="item">
+            <img src="ldrag.png" alt="ldrag" style="height: 70px; width: 70px; margin-top: 5px;">
+            <h3>L Drag</h3>
+            <form>
+                <input type="button" value="SELL" class="btn" onclick="sell(15, this)">
+                <input type="text" value="0" readonly style="width: 80px; text-align:center;">
+                <input type="button" value="BUY" class="btn" onclick="buy(15, this)" id="s">
+            </form>
+        </div>
+        <div class="item">
+            <img src="lkatana.png" alt="lkatana" style="height: 70px; width: 70px; margin-top: 5px;">
+            <h3>L Katana</h3>
+            <form>
+                <input type="button" value="SELL" class="btn" onclick="sell(46, this)">
+                <input type="text" value="0" readonly style="width: 80px; text-align:center;">
+                <input type="button" value="BUY" class="btn" onclick="buy(46, this)" id="s">
+            </form>
+        </div>
+        <div class="item">
+            <img src="lbot.png" alt="lbot" style="height: 70px; width: 70px; margin-top: 5px;">
+            <h3>L Bot</h3>
+            <form>
+                <input type="button" value="SELL" class="btn" onclick="sell(8, this)">
+                <input type="text" value="0" readonly style="width: 80px; text-align:center;">
+                <input type="button" value="BUY" class="btn" onclick="buy(8, this)" id="s">
+            </form>
+        </div>
+        <div class="item">
+            <img src="ltitle.png" alt="ltitle" style="height: 70px; width: 70px; margin-top: 5px;">
+            <h3>L Title</h3>
+            <form>
+                <input type="button" value="SELL" class="btn" onclick="sell(97, this)" >
+                <input type="text" value="0" readonly style="width: 80px; text-align:center;">
+                <input type="button" value="BUY" class="btn" onclick="buy(97, this)" id="s">
+            </form>
+        </div>
+    </section>
+</body>
+<script>
+    function buy(e, btnElement) {
+        var inputField = btnElement.parentElement.querySelector('input[type="text"]');
+        var itemCount = parseInt(inputField.value);
+
+        if (btnElement.id == "s" && itemCount > 0) {
+            alert("You can only purchase one of these items.");
+            return;
+        }
+        var price = e * 33;
+        var m = document.getElementById("money");
+        var newValue = parseFloat(m.innerHTML.replace(/[\$,]/g, '')) - price;
+
+        var formattedValue = new Intl.NumberFormat('en-US', {
+            style: 'decimal',
+            maximumFractionDigits: 2,
+            minimumFractionDigits: 2
+        }).format(newValue);
+
+        m.innerHTML = formattedValue + " $";
+
+        
+        itemCount++;
+        inputField.value = itemCount.toString();
+    }
+
+    function sell(e, btnElement) {
+        var inputField = btnElement.parentElement.querySelector('input[type="text"]');
+        var itemCount = parseInt(inputField.value);
+        if (itemCount == 0) {
+            alert("You have no more of these items.");
+            return;
+        }
+        var price = e * 33;
+        var m = document.getElementById("money");
+        var newValue = parseFloat(m.innerHTML.replace(/[\$,]/g, '')) + price;
+
+        var formattedValue = new Intl.NumberFormat('en-US', {
+            style: 'decimal',
+            maximumFractionDigits: 2,
+            minimumFractionDigits: 2
+        }).format(newValue);
+
+        m.innerHTML = formattedValue + " $";
+
+        
+        itemCount--;
+        inputField.value = itemCount.toString();
+    }
+
+    function buyStack(e, btnElement) {
+        var inputField = btnElement.parentElement.querySelector('input[type="text"]');
+        var itemCount = parseInt(inputField.value);
+
+        if (btnElement.id == "s" && itemCount > 0) {
+            alert("You can only purchase one of these items.");
+            return;
+        }
+        var price = e * 33 * 200;
+        var m = document.getElementById("money");
+        var newValue = parseFloat(m.innerHTML.replace(/[\$,]/g, '')) - price;
+
+        var formattedValue = new Intl.NumberFormat('en-US', {
+            style: 'decimal',
+            maximumFractionDigits: 2,
+            minimumFractionDigits: 2
+        }).format(newValue);
+
+        m.innerHTML = formattedValue + " $";
+
+        
+        itemCount+= 200;
+        inputField.value = itemCount.toString();
+    }
+
+    function sellStack(e, btnElement) {
+        var inputField = btnElement.parentElement.querySelector('input[type="text"]');
+        var itemCount = parseInt(inputField.value);
+        if (itemCount == 0) {
+            alert("You have no more of these items.");
+            return;
+        }
+        var price = e * 33 * 200;
+        var m = document.getElementById("money");
+        var newValue = parseFloat(m.innerHTML.replace(/[\$,]/g, '')) + price;
+
+        var formattedValue = new Intl.NumberFormat('en-US', {
+            style: 'decimal',
+            maximumFractionDigits: 2,
+            minimumFractionDigits: 2
+        }).format(newValue);
+
+        m.innerHTML = formattedValue + " $";
+
+        
+        itemCount-= 200;
+        inputField.value = itemCount.toString();
+    }
+</script>
+
+</html>

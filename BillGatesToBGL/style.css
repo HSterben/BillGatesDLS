@@ -1,0 +1,55 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 2px;
+}
+
+body {
+    text-align: center;
+    background-color: rgb(223, 219, 219);
+}
+
+header {
+    background-color: orange;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+#balance {
+    margin-top: 30px;
+    border-radius: 10px;
+    background-color : white;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 100px;
+    padding-top: 30px;
+    border-radius: 10px;
+    min-height: 700px;
+    margin-top: 30px;
+    background-color: white;
+}
+
+.item {
+    margin: 30px;
+    border-radius: 10px;
+    height: 250px;
+    width: 250px;
+    background-color: turquoise;
+}
+
+img {
+    height: 30px;
+    width: 30px;
+}
+
+form {
+    margin-top: 40px;
+}
+
+.btn {
+    border-radius: 5px;
+    background-color: orange;
+}
